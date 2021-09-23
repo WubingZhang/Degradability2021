@@ -2,22 +2,16 @@
 
 ## Background
 
-Targeted protein degradation (TPD) has rapidly emerged as a therapeutic modality to eliminate previously undruggable proteins because of a unique mechanism-of-action that hijacks the cell’s endogenous protein degradation machinery. However, development of TPD compounds, such as Proteolysis Targeting Chimeras (PROTACs) and “molecular glues”, is largely driven by trial-and-error. Recent systematic studies of the kinome have shown dramatic differences in protein degradation between kinases that have similar drug-target engagement, suggesting unexplained factors influence efficacy. In our study, we investigated how 42 protein features spanning post-translational modifications, protein stability, protein expression and protein-protein interaction influence the degradability of the kinome. By developing a machine learning model, named MAPD (Model-based Analysis of Protein Degradability), we found that the degradability of the kinome can be well predicted by five particular features, including the fraction of ubiquitination sites, acetylation sites, and phosphorylation sites in the protein, protein half life and protein length. Benchmarking revealed the good performance of MAPD in predicting degradability of both kinase and non-kinase proteins. Thus, we extended our predictions of degradability to the entire proteome. Furthermore, by modeling the ubiquitination machinery, we found that protein degradability is particularly dependent on E2-accessible ubiquitination sites. Finally, we developed a user-friend web platform that incorporates protein intrinsic features, protein ligandability, predicted protein degradability, and accessibility of ubiquitination sites / lysine residues to the E2 enzyme. This valuable resource will enable rapid prioritization of targets amenable to TPD and provide insights into rational design of TPD drugs.  
+Targeted protein degradation (TPD) has rapidly emerged as a therapeutic modality to eliminate previously undruggable proteins by repurposing the cell’s endogenous protein degradation machinery. However, the susceptibility of proteins for targeting by TPD approaches, termed “degradability”, is largely unknown. Recent systematic studies to map the degradable kinome have shown differences in degradation between kinases with similar drug-target engagement, suggesting yet unknown factors influencing degradability. We therefore developed a machine learning model, MAPD (Model-based Analysis of Protein Degradability), to predict degradability from protein features that encompass post-translational modifications, protein stability, protein expression and protein-protein interactions. MAPD shows accurate performance in predicting kinases that are degradable by TPD compounds (auPRC=0.759) and is likely generalizable to independent non-kinase proteins. We found five features with statistical significance to achieve optimal prediction, with ubiquitination potential being the most predictive. By structural modeling, we found that E2-accessible ubiquitination sites, but not lysine residues in general, are particularly associated with kinase degradability. Finally, we extended MAPD predictions to the entire proteome to find 964 disease-causing proteins, including 278 cancer genes, that may be tractable to TPD drug development.
 
 
 ## Notes
-This repo provides source codes for repeating the analysis in our study, titled "Protein intrinsic features predict tractability of targeted protein degradation".
+This repo provides source codes for reproducing the analysis in our study, titled "Machine learning modeling of protein-intrinsic features predicts tractability of targeted protein degradation".
 
-If you want to train a MAPD model for predicting degradability, please visit https://github.com/WubingZhang/MAPD.
+If you want to train a MAPD model for predicting degradability, please visit https://liulab-dfci.github.io/MAPD/.
 
 If you want to check the results presented in our study, please visit http://mapd.cistrome.org/
-
-If you want to look at the source code of the MAPD shiny app, please visit https://github.com/WubingZhang/MAPD_Shiny.
 
 ## Citation
 
 Wubing Zhang, 
-
-## Contacts
-* Wubing Zhang (wzhang@ds.dfci.harvard.edu)
-* X. Shirley Liu (xsliu@ds.dfci.harvard.edu)
