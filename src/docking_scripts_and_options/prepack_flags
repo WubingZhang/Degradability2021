@@ -1,0 +1,17 @@
+-in:file:s	<input_file>.pdb
+-unboundrot	<input_file>.pdb
+
+-extra_res_fa	<path_to>/S-lenalidomide.gasteiger.fa.params
+-beta_nov16
+-nstruct	1
+
+-partners	A_B
+
+-detect_disulf true
+-ignore_zero_occupancy	false
+-ex1
+-ex2aro
+-auto_setup_metals
+
+-out:file:scorefile	prepack_score.sc
+-out:pdb_gz
